@@ -27,12 +27,12 @@ const GradeCalculator = () => {
       { name: 'Ethics and deontology', ects: 2, coef: 2, hasTP: false, hasTD: false }
     ],
     'SI-S1': [
-      { name: 'Architecture des systèmes', ects: 3, coef: 3, hasTP: true, hasTD: true },
-      { name: 'Génie logiciel avancé', ects: 2, coef: 2, hasTP: true, hasTD: true },
-      { name: 'Base de données avancées', ects: 2, coef: 2, hasTP: true, hasTD: false },
-      { name: 'Intelligence artificielle', ects: 2, coef: 2, hasTP: true, hasTD: false },
-      { name: 'Sécurité informatique', ects: 2, coef: 2, hasTP: true, hasTD: false },
-      { name: 'Sécurité des algorithmes distribués', ects: 2, coef: 2, hasTP: false, hasTD: true },
+      { name: 'Génie Logiciel Avancé', ects: 2, coef: 2, hasTP: true, hasTD: true },
+      { name: 'Modélisation et Simulation des Systèmes', ects: 2, coef: 2, hasTP: true, hasTD: true },
+      { name: 'Base de données avancées', ects: 3, coef: 3, hasTP: true, hasTD: false },
+      { name: 'Méthodes de Conception des SI', ects: 2, coef: 2, hasTP: true, hasTD: false },
+      { name: 'Systèmes Experts', ects: 2, coef: 2, hasTP: true, hasTD: false },
+      { name: 'Aspects Qualité et Conduite de Projet SI', ects: 2, coef: 2, hasTP: false, hasTD: true },
       { name: 'Anglais scientifique 1', ects: 2, coef: 2, hasTP: false, hasTD: false },
       { name: 'Ethics and deontology', ects: 2, coef: 2, hasTP: false, hasTD: false }
     ],
@@ -42,15 +42,17 @@ const GradeCalculator = () => {
       { name: 'Big Data', ects: 2, coef: 2, hasTP: true, hasTD: false }
     ],
     'SYM-S1': [
-      { name: 'Traitement d\'image et vidéo', ects: 3, coef: 3, hasTP: true, hasTD: true },
-      { name: 'Infographie et animation 3D', ects: 2, coef: 2, hasTP: true, hasTD: true },
-      { name: 'Programmation multimédia', ects: 2, coef: 2, hasTP: true, hasTD: false },
-      { name: 'Réalité virtuelle', ects: 2, coef: 2, hasTP: true, hasTD: false },
-      { name: 'Sécurité informatique', ects: 2, coef: 2, hasTP: true, hasTD: false },
-      { name: 'Sécurité des algorithmes distribués', ects: 2, coef: 2, hasTP: false, hasTD: true },
+      { name: 'Programmation multimédia', ects: 2, coef: 2, hasTP: true, hasTD: true },
+      { name: 'Systèmes d’information pervasifs', ects: 3, coef: 2, hasTP: true, hasTD: true },
+      { name: 'Systèmes Interactifs d’Aide à la Décision', ects: 2, coef: 2, hasTP: true, hasTD: false },
+      { name: 'Systèmes distribués et architectures parallèles', ects: 2, coef: 2, hasTP: true, hasTD: false },
+      { name: 'Méthodes pour l’intelligence artificielle', ects: 2, coef: 2, hasTP: true, hasTD: false },
+      { name: 'Traitement de signal', ects: 2, coef: 2, hasTP: false, hasTD: true },
       { name: 'Anglais scientifique 1', ects: 2, coef: 2, hasTP: false, hasTD: false },
       { name: 'Ethics and deontology', ects: 2, coef: 2, hasTP: false, hasTD: false }
-    ],
+  
+    { name: 'Gestion des projets', ects: 2, coef: 2, hasTP: false, hasTD: false }
+      ],
     'SYM-S2': [
       { name: 'Design d\'interaction', ects: 3, coef: 3, hasTP: true, hasTD: true },
       { name: 'Production multimédia', ects: 2, coef: 2, hasTP: true, hasTD: true },
