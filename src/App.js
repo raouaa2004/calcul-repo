@@ -59,7 +59,7 @@ const GradeCalculator = () => {
     ],
     'SI-S2': [
       { name: 'Ingénierie des Besoins', ects: 4, coef: 2, unit: 'UEF2', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Ingénierie des Modèles', ects: 4, coef: 2, unit: 'UEF2', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Ingénierie des Modèles', ects: 4, coef: 2, unit: 'UEF2', hasExam: true, hasTD: true, hasTP: false },
       { name: 'Systèmes Distribués', ects: 6, coef: 3, unit: 'UEF3', hasExam: true, hasTD: false, hasTP: true },
       { name: 'Algorithmique Distribuée', ects: 4, coef: 2, unit: 'UEF3', hasExam: true, hasTD: true, hasTP: false },
       { name: 'Workflow et Systèmes Coopératifs', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: true, hasTP: false },
