@@ -27,14 +27,14 @@ const GradeCalculator = () => {
     ],
     'RSI-S2': [
       { name: 'Ingénierie des réseaux', ects: 6, coef: 3, unit: 'UEF3', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Sécurité des réseaux Informatiques', ects: 4, coef: 2, unit: 'UEF3', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Administration des réseaux', ects: 4, coef: 2, unit: 'UEF4', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Systèmes biométriques', ects: 4, coef: 2, unit: 'UEF4', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Sécurité des réseaux Informatiques', ects: 4, coef: 2, unit: 'UEF3', hasExam: true, hasTD: true, hasTP: false },
+      { name: 'Administration des réseaux', ects: 4, coef: 2, unit: 'UEF4', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Systèmes biométriques', ects: 4, coef: 2, unit: 'UEF4', hasExam: true, hasTD: false, hasTP: true },
       { name: 'Anglais scientifique 1', ects: 1, coef: 1, unit: 'UEM2', hasExam: true, hasTD: false, hasTP: false },
-      { name: 'Gestion de Projets', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Programmation orientée objet', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Culture de l\'entreprise', ects: 1, coef: 1, unit: 'UET2', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Réseaux mobiles', ects: 2, coef: 2, unit: 'UED2', hasExam: true, hasTD: true, hasTP: true }
+      { name: 'Gestion de Projets', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: true, hasTP: false },
+      { name: 'Programmation orientée objet', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Culture de l\'entreprise', ects: 1, coef: 1, unit: 'UET2', hasExam: true, hasTD: false, hasTP: false },
+      { name: 'Réseaux mobiles', ects: 2, coef: 2, unit: 'UED2', hasExam: true, hasTD: false, hasTP: true }
     ],
     'RSI-S3': [
       { name: 'Cryptologie', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
@@ -60,12 +60,12 @@ const GradeCalculator = () => {
     'SI-S2': [
       { name: 'Ingénierie des Besoins', ects: 4, coef: 2, unit: 'UEF2', hasExam: true, hasTD: true, hasTP: true },
       { name: 'Ingénierie des Modèles', ects: 4, coef: 2, unit: 'UEF2', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Systèmes Distribués', ects: 6, coef: 3, unit: 'UEF3', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Algorithmique Distribuée', ects: 4, coef: 2, unit: 'UEF3', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Workflow et Systèmes Coopératifs', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Systèmes Multi-Agents', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Systèmes Distribués', ects: 6, coef: 3, unit: 'UEF3', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Algorithmique Distribuée', ects: 4, coef: 2, unit: 'UEF3', hasExam: true, hasTD: true, hasTP: false },
+      { name: 'Workflow et Systèmes Coopératifs', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: true, hasTP: false },
+      { name: 'Systèmes Multi-Agents', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: false, hasTP: true },
       { name: 'Anglais Technique et Scientifique 2', ects: 1, coef: 1, unit: 'UEM2', hasExam: true, hasTD: false, hasTP: false },
-      { name: 'La Cybercriminalité', ects: 2, coef: 2, unit: 'UET2', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'La Cybercriminalité', ects: 2, coef: 2, unit: 'UET2', hasExam: true, hasTD: false, hasTP: true },
       { name: 'Gestion des Organisations', ects: 1, coef: 1, unit: 'UET2', hasExam: true, hasTD: false, hasTP: false }
     ],
     'SI-S3': [
@@ -91,15 +91,15 @@ const GradeCalculator = () => {
       { name: 'Gestion des projets', ects: 2, coef: 1, unit: 'UED1', hasExam: true, hasTD: true, hasTP: false }
     ],
     'SYM-S2': [
-      { name: 'Reconnaissance des formes', ects: 4, coef: 2, unit: 'UEF3', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Base de données multimédia', ects: 4, coef: 2, unit: 'UEF3', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Reconnaissance des formes', ects: 4, coef: 2, unit: 'UEF3', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Base de données multimédia', ects: 4, coef: 2, unit: 'UEF3', hasExam: true, hasTD: false, hasTP: true },
       { name: 'Big Data et fouille de données', ects: 6, coef: 3, unit: 'UEF4', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Système d\'information géographique et applications', ects: 4, coef: 2, unit: 'UEF4', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Système d\'information géographique et applications', ects: 4, coef: 2, unit: 'UEF4', hasExam: true, hasTD: false, hasTP: true },
       { name: 'Anglais scientifique 2', ects: 2, coef: 1, unit: 'UEM2', hasExam: true, hasTD: false, hasTP: false },
-      { name: 'Complexité et optimisation', ects: 3, coef: 2, unit: 'UEM2', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Modélisation et simulation des systèmes complexes', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Complexité et optimisation', ects: 3, coef: 2, unit: 'UEM2', hasExam: true, hasTD: true, hasTP: false },
+      { name: 'Modélisation et simulation des systèmes complexes', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: false, hasTP: true },
       { name: 'Culture de l\'entreprise', ects: 1, coef: 1, unit: 'UET2', hasExam: true, hasTD: false, hasTP: false },
-      { name: 'Traitement d\'images', ects: 2, coef: 2, unit: 'UED2', hasExam: true, hasTD: true, hasTP: true }
+      { name: 'Traitement d\'images', ects: 2, coef: 2, unit: 'UED2', hasExam: true, hasTD: false, hasTP: true }
     ],
     'SYM-S3': [
       { name: 'Réalité virtuelle et humains virtuels', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
