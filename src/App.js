@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { GraduationCap, BookOpen, Calculator, Moon, Sun } from 'lucide-react';
-
+import { Moon, Sun } from 'lucide-react';
 const GradeCalculator = () => {
   const [specialty, setSpecialty] = useState('');
   const [semester, setSemester] = useState('');
