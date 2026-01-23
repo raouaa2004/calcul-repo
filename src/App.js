@@ -142,7 +142,7 @@ const GradeCalculator = () => {
               <img src="image.png" alt="" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
             <div>
-              <h1 style={{ fontSize: '18px', fontWeight: '700', margin: 0, fontFamily: "'Abril Fatface', cursive", lineHeight: '1.1' }}>
+              <h1 style={{ fontSize: '18px', fontWeight: '700', margin: 0, fontFamily: "'Abril Fatface', lineHeight: '1.1' }}>
                 Calculateur de moyenne Master
               </h1>
               <p style={{fontSize: '10px', opacity: 0.9}}>Département d'Informatique - Tébessa</p>
