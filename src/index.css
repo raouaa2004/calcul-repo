@@ -1,13 +1,55 @@
+/* index.css */
+
+/* Import de Raleway (assure-toi d'avoir ajouté le <link> dans index.html) */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc; /* couleur claire par défaut */
+  color: #1e293b; /* couleur texte par défaut */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Input number : enlever les flèches */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield; /* pour Firefox */
+  font-size: 16px; /* évite le zoom automatique sur iOS */
+}
+
+/* Responsive grids */
+@media (max-width: 600px) {
+  .selection-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .grades-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+  }
+  .unit-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .grades-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
