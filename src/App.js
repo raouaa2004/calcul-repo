@@ -50,7 +50,7 @@ const GradeCalculator = () => {
     'SI-S1': [
       { name: 'Génie Logiciel Avancé', ects: 4, coef: 3, unit: 'UEF1', hasExam: true, hasTD: true, hasTP: true },
       { name: 'Modélisation et Simulation des Systèmes', ects: 4, coef: 3, unit: 'UEF1', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Base de données avancées', ects: 4, coef: 3, unit: 'UEF2', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Base de données avancées', ects: 4, coef: 3, unit: 'UEF2', hasExam: true, hasTD: true, hasTP: true },
       { name: 'Méthodes de Conception des SI', ects: 4, coef: 2, unit: 'UEF2', hasExam: true, hasTD: true, hasTP: false },
       { name: 'Systèmes Experts', ects: 4, coef: 2, unit: 'UEM1', hasExam: true, hasTD: true, hasTP: false },
       { name: 'Aspects Qualité et Conduite de Projet SI', ects: 4, coef: 2, unit: 'UEM1', hasExam: true, hasTD: true, hasTP: false },
