@@ -36,6 +36,17 @@ const GradeCalculator = () => {
       { name: 'Culture de l\'entreprise', ects: 1, coef: 1, unit: 'UET2', hasExam: true, hasTD: true, hasTP: true },
       { name: 'Réseaux mobiles', ects: 2, coef: 2, unit: 'UED2', hasExam: true, hasTD: true, hasTP: true }
     ],
+    'RSI-S3': [
+      { name: 'Cryptologie', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Sécurité système avancée', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Audit de sécurité', ects: 4, coef: 2, unit: 'UEF6', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Sûreté des systèmes et applications répartis', ects: 6, coef: 3, unit: 'UEF6', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Techniques d\'investigation 2', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Méthodologies de la Recherche Scientifique', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Anglais scientifique 3', ects: 1, coef: 1, unit: 'UEM3', hasExam: true, hasTD: false, hasTP: false },
+      { name: 'Législation des nouvelles technologies', ects: 1, coef: 1, unit: 'UET3', hasExam: true, hasTD: false, hasTP: false },
+      { name: 'Technologie e-commerce', ects: 2, coef: 2, unit: 'UED3', hasExam: true, hasTD: true, hasTP: true }
+    ],
     'SI-S1': [
       { name: 'Génie Logiciel Avancé', ects: 4, coef: 3, unit: 'UEF1', hasExam: true, hasTD: true, hasTP: true },
       { name: 'Modélisation et Simulation des Systèmes', ects: 4, coef: 3, unit: 'UEF1', hasExam: true, hasTD: true, hasTP: true },
@@ -56,6 +67,17 @@ const GradeCalculator = () => {
       { name: 'Anglais Technique et Scientifique 2', ects: 1, coef: 1, unit: 'UEM2', hasExam: true, hasTD: false, hasTP: false },
       { name: 'La Cybercriminalité', ects: 2, coef: 2, unit: 'UET2', hasExam: true, hasTD: true, hasTP: true },
       { name: 'Gestion des Organisations', ects: 1, coef: 1, unit: 'UET2', hasExam: true, hasTD: false, hasTP: false }
+    ],
+    'SI-S3': [
+      { name: 'Réseaux Informatique d\'Organisation', ects: 6, coef: 3, unit: 'UEF4', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Systèmes d\'Information et Aide à la Décision', ects: 4, coef: 2, unit: 'UEF4', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Concepts et Techniques de Data Mining', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Recherche d\'Information', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Commerce électronique', ects: 2, coef: 2, unit: 'UET3', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'L\'Intégrité dans la Recherche Scientifique', ects: 1, coef: 1, unit: 'UET3', hasExam: true, hasTD: false, hasTP: false },
+      { name: 'Ontologies et Web Sémantique', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Projet d\'Initiation à la Recherche', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Anglais Technique et Scientifique 3', ects: 1, coef: 1, unit: 'UEM3', hasExam: true, hasTD: false, hasTP: false }
     ],
     'SYM-S1': [
       { name: 'Programmation multimédia', ects: 4, coef: 2, unit: 'UEF1', hasExam: true, hasTD: false, hasTP: true },
@@ -78,28 +100,6 @@ const GradeCalculator = () => {
       { name: 'Modélisation et simulation des systèmes complexes', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: true, hasTP: true },
       { name: 'Culture de l\'entreprise', ects: 1, coef: 1, unit: 'UET2', hasExam: true, hasTD: false, hasTP: false },
       { name: 'Traitement d\'images', ects: 2, coef: 2, unit: 'UED2', hasExam: true, hasTD: true, hasTP: true }
-    ],
-    'RSI-S3': [
-      { name: 'Cryptologie', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Sécurité système avancée', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Audit de sécurité', ects: 4, coef: 2, unit: 'UEF6', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Sûreté des systèmes et applications répartis', ects: 6, coef: 3, unit: 'UEF6', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Techniques d\'investigation 2', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Méthodologies de la Recherche Scientifique', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Anglais scientifique 3', ects: 1, coef: 1, unit: 'UEM3', hasExam: true, hasTD: false, hasTP: false },
-      { name: 'Législation des nouvelles technologies', ects: 1, coef: 1, unit: 'UET3', hasExam: true, hasTD: false, hasTP: false },
-      { name: 'Technologie e-commerce', ects: 2, coef: 2, unit: 'UED3', hasExam: true, hasTD: true, hasTP: true }
-    ],
-    'SI-S3': [
-      { name: 'Réseaux Informatique d\'Organisation', ects: 6, coef: 3, unit: 'UEF4', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Systèmes d\'Information et Aide à la Décision', ects: 4, coef: 2, unit: 'UEF4', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Concepts et Techniques de Data Mining', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Recherche d\'Information', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Commerce électronique', ects: 2, coef: 2, unit: 'UET3', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'L\'Intégrité dans la Recherche Scientifique', ects: 1, coef: 1, unit: 'UET3', hasExam: true, hasTD: false, hasTP: false },
-      { name: 'Ontologies et Web Sémantique', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Projet d\'Initiation à la Recherche', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Anglais Technique et Scientifique 3', ects: 1, coef: 1, unit: 'UEM3', hasExam: true, hasTD: false, hasTP: false }
     ],
     'SYM-S3': [
       { name: 'Réalité virtuelle et humains virtuels', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
@@ -199,7 +199,6 @@ const GradeCalculator = () => {
 
   return (
     <div style={{background: theme.bg, minHeight: '100vh', fontFamily: "'Raleway', sans-serif"}}>
-      {/* Header */}
       <div style={{ background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', color: '#ffffff', padding: '16px 15px', boxShadow: '0 4px 24px rgba(30, 58, 138, 0.3)' }}>
         <div style={{maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '10px'}}>
           <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
@@ -220,7 +219,6 @@ const GradeCalculator = () => {
       </div>
 
       <div style={{maxWidth: '1200px', margin: '0 auto', padding: '15px'}}>
-        {/* Selection Card */}
         <div style={{...styles.card, background: theme.card, color: theme.text, borderColor: theme.border}}>
           <div className="selection-grid" style={styles.grid}>
             <div style={styles.formGroup}>
@@ -236,12 +234,12 @@ const GradeCalculator = () => {
                 <option value="">-- Choisir --</option>
                 <option value="Semestre 1">Semestre 1</option>
                 <option value="Semestre 2">Semestre 2</option>
+                <option value="Semestre 3">Semestre 3</option>
               </select>
             </div>
           </div>
         </div>
 
-        {/* Units and Modules */}
         {units.map(unitName => {
           const unitModules = currentModules.filter(m => m.unit === unitName);
           const unitAvg = calculateUnitAverage(unitName);
@@ -302,7 +300,6 @@ const GradeCalculator = () => {
           );
         })}
 
-        {/* Total Result */}
         {currentModules.length > 0 && (
           <div style={{marginTop: '30px', textAlign: 'center', padding: '20px', background: theme.card, borderRadius: '20px', border: `2px solid ${getAverageColor(generalAverage)}`, marginBottom: '40px'}}>
             <h2 style={{color: theme.text, marginBottom: '5px', fontSize: '18px'}}>Moyenne Générale</h2>
