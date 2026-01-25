@@ -192,46 +192,46 @@ const GradeCalculator = () => {
   const getModuleColor = (index) => ['#3b82f6', '#8b5cf6', '#ec4899', '#f59e0b', '#10b981', '#06b6d4'][index % 6];
 
   const theme = darkMode ? {
-    bg: '#0f172a', card: '#1e293b', text: '#f1f5f9', textSecondary: '#cbd5e1', border: '#334155', input: '#334155', inputText: '#f1f5f9'
+    bg: '#0f172a', card: '#1e293b', text: '#f1f5f9', textSecondary: '#94a3b8', border: '#334155', input: '#334155', inputText: '#f1f5f9'
   } : {
-    bg: '#f8fafc', card: '#ffffff', text: '#1e293b', textSecondary: '#64748b', border: '#e2e8f0', input: '#ffffff', inputText: '#1e293b'
+    bg: '#f8fafc', card: '#ffffff', text: '#1e293b', textSecondary: '#64748b', border: '#e2e8f0', input: '#f9fafb', inputText: '#1e293b'
   };
 
   return (
-    <div style={{background: theme.bg, minHeight: '100vh', fontFamily: "'Raleway', sans-serif"}}>
-      <div style={{ background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)', color: '#ffffff', padding: '16px 15px', boxShadow: '0 4px 24px rgba(30, 58, 138, 0.3)' }}>
-        <div style={{maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '10px'}}>
-          <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-            <div style={{ width: '40px', height: '40px', borderRadius: '50%', overflow: 'hidden', border: '2px solid rgba(255, 255, 255, 0.3)', flexShrink: 0 }}>
+    <div style={{background: theme.bg, minHeight: '100vh', fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif"}}>
+      <div style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: '#ffffff', padding: '24px 20px', boxShadow: '0 10px 40px rgba(102, 126, 234, 0.3)' }}>
+        <div style={{maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '15px'}}>
+          <div style={{display: 'flex', alignItems: 'center', gap: '15px'}}>
+            <div style={{ width: '56px', height: '56px', borderRadius: '16px', overflow: 'hidden', border: '3px solid rgba(255, 255, 255, 0.2)', flexShrink: 0, boxShadow: '0 8px 16px rgba(0,0,0,0.1)' }}>
               <img src="image.png" alt="" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
             <div>
-              <h1 style={{ fontSize: '18px', fontWeight: '700', margin: 0, fontFamily: 'Abril Fatface', lineHeight: 1.1 }}>
-                Calculateur de moyenne Master
+              <h1 style={{ fontSize: '24px', fontWeight: '800', margin: 0, letterSpacing: '-0.5px', lineHeight: 1.2 }}>
+                Calculateur de Moyenne
               </h1>
-              <p style={{fontSize: '10px', opacity: 0.9}}>Département d'Informatique - Tébessa</p>
+              <p style={{fontSize: '13px', opacity: 0.95, marginTop: '4px', fontWeight: '500'}}>Master Informatique • Université de Tébessa</p>
             </div>
           </div>
-          <button onClick={() => setDarkMode(!darkMode)} style={{ width: '40px', height: '40px', borderRadius: '50%', border: '1px solid rgba(255, 255, 255, 0.3)', background: 'rgba(255, 255, 255, 0.15)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-            {darkMode ? <Sun size={20} color="#fbbf24" /> : <Moon size={20} color="#ffffff" />}
+          <button onClick={() => setDarkMode(!darkMode)} style={{ width: '48px', height: '48px', borderRadius: '14px', border: 'none', background: 'rgba(255, 255, 255, 0.2)', backdropFilter: 'blur(10px)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'all 0.3s ease' }}>
+            {darkMode ? <Sun size={22} color="#fbbf24" /> : <Moon size={22} color="#ffffff" />}
           </button>
         </div>
       </div>
 
-      <div style={{maxWidth: '1200px', margin: '0 auto', padding: '15px'}}>
-        <div style={{...styles.card, background: theme.card, color: theme.text, borderColor: theme.border}}>
+      <div style={{maxWidth: '1200px', margin: '0 auto', padding: '30px 20px'}}>
+        <div style={{...styles.card, background: theme.card, color: theme.text, borderColor: theme.border, padding: '24px', boxShadow: darkMode ? '0 4px 20px rgba(0,0,0,0.3)' : '0 4px 20px rgba(0,0,0,0.08)'}}>
           <div className="selection-grid" style={styles.grid}>
             <div style={styles.formGroup}>
-              <label style={styles.label}>Spécialité</label>
-              <select value={specialty} onChange={(e) => {setSpecialty(e.target.value); setSemester('');}} style={{...styles.select, background: theme.input, color: theme.inputText, borderColor: theme.border}}>
-                <option value="">-- Choisir --</option>
+              <label style={{...styles.label, fontSize: '14px', fontWeight: '600', marginBottom: '8px'}}>Spécialité</label>
+              <select value={specialty} onChange={(e) => {setSpecialty(e.target.value); setSemester('');}} style={{...styles.select, background: theme.input, color: theme.inputText, borderColor: theme.border, padding: '12px 16px', fontSize: '15px', fontWeight: '500'}}>
+                <option value="">Sélectionner une spécialité</option>
                 {specialties.map(spec => <option key={spec} value={spec}>{spec}</option>)}
               </select>
             </div>
             <div style={styles.formGroup}>
-              <label style={styles.label}>Semestre</label>
-              <select value={semester} onChange={(e) => setSemester(e.target.value)} disabled={!specialty} style={{...styles.select, background: theme.input, color: theme.inputText, borderColor: theme.border}}>
-                <option value="">-- Choisir --</option>
+              <label style={{...styles.label, fontSize: '14px', fontWeight: '600', marginBottom: '8px'}}>Semestre</label>
+              <select value={semester} onChange={(e) => setSemester(e.target.value)} disabled={!specialty} style={{...styles.select, background: theme.input, color: theme.inputText, borderColor: theme.border, padding: '12px 16px', fontSize: '15px', fontWeight: '500', opacity: !specialty ? 0.5 : 1}}>
+                <option value="">Sélectionner un semestre</option>
                 <option value="Semestre 1">Semestre 1</option>
                 <option value="Semestre 2">Semestre 2</option>
                 <option value="Semestre 3">Semestre 3</option>
@@ -246,12 +246,14 @@ const GradeCalculator = () => {
           const unitCoef = unitModules.reduce((sum, m) => sum + m.coef, 0);
 
           return (
-            <div key={unitName} style={{marginBottom: '25px'}}>
-              <div className="unit-header" style={{...styles.card, background: theme.card, borderColor: theme.border, marginBottom: '12px', padding: '12px 15px'}}>
-                <h3 style={{margin: '0 0 5px 0', color: '#3b82f6', fontSize: '16px'}}>{unitName}</h3>
-                <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-                  <span style={{...styles.badge, background: '#3b82f620', color: '#3b82f6'}}>Coef {unitCoef}</span>
-                  <span style={{fontWeight: '700', color: getAverageColor(unitAvg), fontSize: '14px'}}>Moyenne: {unitAvg.toFixed(2)}</span>
+            <div key={unitName} style={{marginBottom: '40px'}}>
+              <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', paddingBottom: '12px', borderBottom: `3px solid ${darkMode ? '#334155' : '#e2e8f0'}`}}>
+                <div>
+                  <h3 style={{margin: 0, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontSize: '20px', fontWeight: '800'}}>{unitName}</h3>
+                  <span style={{fontSize: '13px', color: theme.textSecondary, fontWeight: '500', marginTop: '4px', display: 'inline-block'}}>Coefficient: {unitCoef}</span>
+                </div>
+                <div style={{background: `linear-gradient(135deg, ${getAverageColor(unitAvg)}15, ${getAverageColor(unitAvg)}25)`, padding: '10px 20px', borderRadius: '12px', border: `2px solid ${getAverageColor(unitAvg)}30`}}>
+                  <span style={{fontWeight: '800', color: getAverageColor(unitAvg), fontSize: '18px'}}>{unitAvg.toFixed(2)}</span>
                 </div>
               </div>
 
@@ -262,35 +264,39 @@ const GradeCalculator = () => {
                   const moduleAvg = calculateModuleAverage(module, moduleGrades);
 
                   return (
-                    <div key={moduleIndex} style={{...styles.moduleCard, background: theme.card, borderColor: theme.border}}>
+                    <div key={moduleIndex} style={{...styles.moduleCard, background: theme.card, borderColor: theme.border, boxShadow: darkMode ? '0 2px 8px rgba(0,0,0,0.2)' : '0 2px 8px rgba(0,0,0,0.04)', transition: 'all 0.3s ease', padding: '20px'}}>
                       <div style={styles.moduleHeader}>
                         <div style={styles.moduleHeaderLeft}>
-                          <div style={{width: '4px', height: '20px', background: getModuleColor(moduleIndex), borderRadius: '2px'}}></div>
-                          <h4 style={{margin: 0, color: theme.text, fontSize: '14px', lineHeight: '1.2'}}>{module.name}</h4>
+                          <div style={{width: '5px', height: '32px', background: getModuleColor(moduleIndex), borderRadius: '3px', boxShadow: `0 2px 8px ${getModuleColor(moduleIndex)}40`}}></div>
+                          <div>
+                            <h4 style={{margin: 0, color: theme.text, fontSize: '15px', lineHeight: '1.3', fontWeight: '700'}}>{module.name}</h4>
+                            <span style={{fontSize: '12px', color: theme.textSecondary, marginTop: '2px', display: 'inline-block'}}>ECTS: {module.ects}</span>
+                          </div>
                         </div>
-                        <span style={{...styles.badge, background: `${getModuleColor(moduleIndex)}15`, color: getModuleColor(moduleIndex), whiteSpace: 'nowrap'}}>Coef {module.coef}</span>
+                        <span style={{...styles.badge, background: `${getModuleColor(moduleIndex)}20`, color: getModuleColor(moduleIndex), whiteSpace: 'nowrap', padding: '6px 14px', fontSize: '12px', fontWeight: '700'}}>Coef {module.coef}</span>
                       </div>
 
-                      <div className="grades-grid" style={styles.gradesGrid}>
+                      <div className="grades-grid" style={{...styles.gradesGrid, marginTop: '18px'}}>
                         <div>
-                          <label style={styles.inputLabel}>Examen</label>
-                          <input type="number" inputMode="decimal" placeholder="00" value={moduleGrades.exam || ''} onChange={(e) => handleGradeChange(moduleIndex, 'exam', e.target.value)} style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border}} />
+                          <label style={{...styles.inputLabel, fontSize: '12px', fontWeight: '600', marginBottom: '6px'}}>Examen</label>
+                          <input type="number" inputMode="decimal" placeholder="0.00" value={moduleGrades.exam || ''} onChange={(e) => handleGradeChange(moduleIndex, 'exam', e.target.value)} style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border, padding: '10px 8px', fontSize: '15px', fontWeight: '600'}} />
                         </div>
                         {module.hasTD && (
                           <div>
-                            <label style={styles.inputLabel}>TD</label>
-                            <input type="number" inputMode="decimal" placeholder="00" value={moduleGrades.td || ''} onChange={(e) => handleGradeChange(moduleIndex, 'td', e.target.value)} style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border}} />
+                            <label style={{...styles.inputLabel, fontSize: '12px', fontWeight: '600', marginBottom: '6px'}}>TD</label>
+                            <input type="number" inputMode="decimal" placeholder="0.00" value={moduleGrades.td || ''} onChange={(e) => handleGradeChange(moduleIndex, 'td', e.target.value)} style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border, padding: '10px 8px', fontSize: '15px', fontWeight: '600'}} />
                           </div>
                         )}
                         {module.hasTP && (
                           <div>
-                            <label style={styles.inputLabel}>TP</label>
-                            <input type="number" inputMode="decimal" placeholder="00" value={moduleGrades.tp || ''} onChange={(e) => handleGradeChange(moduleIndex, 'tp', e.target.value)} style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border}} />
+                            <label style={{...styles.inputLabel, fontSize: '12px', fontWeight: '600', marginBottom: '6px'}}>TP</label>
+                            <input type="number" inputMode="decimal" placeholder="0.00" value={moduleGrades.tp || ''} onChange={(e) => handleGradeChange(moduleIndex, 'tp', e.target.value)} style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border, padding: '10px 8px', fontSize: '15px', fontWeight: '600'}} />
                           </div>
                         )}
                       </div>
-                      <div style={{textAlign: 'right', marginTop: '12px', fontWeight: '700', color: getAverageColor(moduleAvg), fontSize: '13px'}}>
-                        Module: {moduleAvg.toFixed(2)}
+                      <div style={{textAlign: 'right', marginTop: '16px', fontWeight: '800', color: getAverageColor(moduleAvg), fontSize: '16px', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: '8px'}}>
+                        <span style={{fontSize: '13px', color: theme.textSecondary, fontWeight: '600'}}>Moyenne:</span>
+                        <span>{moduleAvg.toFixed(2)}</span>
                       </div>
                     </div>
                   );
@@ -301,10 +307,10 @@ const GradeCalculator = () => {
         })}
 
         {currentModules.length > 0 && (
-          <div style={{marginTop: '30px', textAlign: 'center', padding: '20px', background: theme.card, borderRadius: '20px', border: `2px solid ${getAverageColor(generalAverage)}`, marginBottom: '40px'}}>
-            <h2 style={{color: theme.text, marginBottom: '5px', fontSize: '18px'}}>Moyenne Générale</h2>
-            <div style={{fontSize: '48px', fontWeight: '800', color: getAverageColor(generalAverage)}}>{generalAverage}</div>
-            <div style={{marginTop: '10px', fontWeight: '700', fontSize: '20px'}}>{parseFloat(generalAverage) >= 10 ? '✅ Admis' : '❌ Ajourné'}</div>
+          <div style={{marginTop: '40px', textAlign: 'center', padding: '32px', background: `linear-gradient(135deg, ${getAverageColor(generalAverage)}10, ${getAverageColor(generalAverage)}20)`, borderRadius: '20px', border: `3px solid ${getAverageColor(generalAverage)}`, marginBottom: '50px', boxShadow: darkMode ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(0,0,0,0.1)'}}>
+            <h2 style={{color: theme.textSecondary, marginBottom: '12px', fontSize: '16px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1px'}}>Moyenne Générale</h2>
+            <div style={{fontSize: '64px', fontWeight: '900', color: getAverageColor(generalAverage), letterSpacing: '-2px', lineHeight: 1}}>{generalAverage}</div>
+            <div style={{marginTop: '16px', fontWeight: '700', fontSize: '24px', color: theme.text}}>{parseFloat(generalAverage) >= 10 ? '✅ Admis' : '❌ Ajourné'}</div>
           </div>
         )}
       </div>
@@ -317,7 +323,6 @@ const GradeCalculator = () => {
         @media (max-width: 600px) {
           .selection-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
           .grades-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 8px !important; }
-          .unit-header { flex-direction: column; align-items: flex-start !important; }
         }
 
         @media (max-width: 350px) {
@@ -329,19 +334,19 @@ const GradeCalculator = () => {
 };
 
 const styles = {
-  card: { borderRadius: '12px', padding: '15px', marginBottom: '15px', border: '1px solid', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' },
-  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '15px' },
-  formGroup: { display: 'flex', flexDirection: 'column', gap: '5px' },
-  label: { fontSize: '13px', fontWeight: '600' },
-  select: { padding: '10px', borderRadius: '8px', border: '1px solid', outline: 'none', fontSize: '14px', width: '100%' },
-  moduleCard: { padding: '15px', borderRadius: '12px', border: '1px solid', marginBottom: '10px' },
-  moduleHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px', gap: '10px' },
-  moduleHeaderLeft: { display: 'flex', alignItems: 'flex-start', gap: '8px' },
-  gradesGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(80px, 1fr))', gap: '10px' },
-  inputLabel: { fontSize: '11px', display: 'block', marginBottom: '4px', opacity: 0.8, textAlign: 'center' },
-  input: { width: '100%', padding: '8px 4px', borderRadius: '6px', border: '1px solid', textAlign: 'center', fontWeight: '600' },
-  badge: { padding: '2px 8px', borderRadius: '12px', fontSize: '11px', fontWeight: '600' },
-  modulesContainer: { display: 'flex', flexDirection: 'column', gap: '8px' }
+  card: { borderRadius: '16px', padding: '20px', marginBottom: '20px', border: '1px solid', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' },
+  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' },
+  formGroup: { display: 'flex', flexDirection: 'column', gap: '8px' },
+  label: { fontSize: '14px', fontWeight: '600' },
+  select: { padding: '12px', borderRadius: '10px', border: '2px solid', outline: 'none', fontSize: '15px', width: '100%', cursor: 'pointer', transition: 'all 0.3s ease' },
+  moduleCard: { padding: '20px', borderRadius: '16px', border: '2px solid', marginBottom: '12px', transition: 'all 0.3s ease' },
+  moduleHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px', gap: '12px' },
+  moduleHeaderLeft: { display: 'flex', alignItems: 'flex-start', gap: '12px', flex: 1 },
+  gradesGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: '12px' },
+  inputLabel: { fontSize: '12px', display: 'block', marginBottom: '6px', fontWeight: '600', textAlign: 'center' },
+  input: { width: '100%', padding: '10px 8px', borderRadius: '10px', border: '2px solid', textAlign: 'center', fontWeight: '700', outline: 'none', transition: 'all 0.3s ease' },
+  badge: { padding: '6px 12px', borderRadius: '14px', fontSize: '12px', fontWeight: '700' },
+  modulesContainer: { display: 'flex', flexDirection: 'column', gap: '12px' }
 };
 
 export default GradeCalculator;
