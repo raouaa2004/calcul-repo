@@ -30,22 +30,22 @@ const GradeCalculator = () => {
       { name: 'Sécurité des réseaux Informatiques', ects: 4, coef: 2, unit: 'UEF3', hasExam: true, hasTD: true, hasTP: false },
       { name: 'Administration des réseaux', ects: 4, coef: 2, unit: 'UEF4', hasExam: true, hasTD: false, hasTP: true },
       { name: 'Systèmes biométriques', ects: 4, coef: 2, unit: 'UEF4', hasExam: true, hasTD: false, hasTP: true },
-      { name: 'Anglais scientifique 1', ects: 1, coef: 1, unit: 'UEM2', hasExam: true, hasTD: false, hasTP: false },
+      { name: 'Anglais scientifique 2', ects: 1, coef: 1, unit: 'UEM2', hasExam: true, hasTD: false, hasTP: false },
       { name: 'Gestion de Projets', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: true, hasTP: false },
       { name: 'Programmation orientée objet', ects: 4, coef: 2, unit: 'UEM2', hasExam: true, hasTD: false, hasTP: true },
       { name: 'Culture de l\'entreprise', ects: 1, coef: 1, unit: 'UET2', hasExam: true, hasTD: false, hasTP: false },
       { name: 'Réseaux mobiles', ects: 2, coef: 2, unit: 'UED2', hasExam: true, hasTD: false, hasTP: true }
     ],
     'RSI-S3': [
-      { name: 'Cryptologie', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Sécurité système avancée', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Audit de sécurité', ects: 4, coef: 2, unit: 'UEF6', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Sûreté des systèmes et applications répartis', ects: 6, coef: 3, unit: 'UEF6', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Techniques d\'investigation 2', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Méthodologies de la Recherche Scientifique', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Cryptologie', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Sécurité système avancée', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: false, hasTP: false },
+      { name: 'Audit de sécurité', ects: 4, coef: 2, unit: 'UEF6', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Sûreté des systèmes et applications répartis', ects: 6, coef: 3, unit: 'UEF6', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Techniques d\'investigation 2', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: false },
+      { name: 'Méthodologies de la Recherche Scientifique', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: false },
       { name: 'Anglais scientifique 3', ects: 1, coef: 1, unit: 'UEM3', hasExam: true, hasTD: false, hasTP: false },
       { name: 'Législation des nouvelles technologies', ects: 1, coef: 1, unit: 'UET3', hasExam: true, hasTD: false, hasTP: false },
-      { name: 'Technologie e-commerce', ects: 2, coef: 2, unit: 'UED3', hasExam: true, hasTD: true, hasTP: true }
+      { name: 'Technologie e-commerce', ects: 2, coef: 2, unit: 'UED3', hasExam: true, hasTD: false, hasTP: true }
     ],
     'SI-S1': [
       { name: 'Génie Logiciel Avancé', ects: 4, coef: 3, unit: 'UEF1', hasExam: true, hasTD: true, hasTP: true },
@@ -70,13 +70,13 @@ const GradeCalculator = () => {
     ],
     'SI-S3': [
       { name: 'Réseaux Informatique d\'Organisation', ects: 6, coef: 3, unit: 'UEF4', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Systèmes d\'Information et Aide à la Décision', ects: 4, coef: 2, unit: 'UEF4', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Concepts et Techniques de Data Mining', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Recherche d\'Information', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Commerce électronique', ects: 2, coef: 2, unit: 'UET3', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Systèmes d\'Information et Aide à la Décision', ects: 4, coef: 2, unit: 'UEF4', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Concepts et Techniques de Data Mining', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: false },
+      { name: 'Recherche d\'Information', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Commerce électronique', ects: 2, coef: 2, unit: 'UET3', hasExam: true, hasTD: false, hasTP: false },
       { name: 'L\'Intégrité dans la Recherche Scientifique', ects: 1, coef: 1, unit: 'UET3', hasExam: true, hasTD: false, hasTP: false },
-      { name: 'Ontologies et Web Sémantique', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Projet d\'Initiation à la Recherche', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Ontologies et Web Sémantique', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Projet d\'Initiation à la Recherche', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: false, hasTP: false },
       { name: 'Anglais Technique et Scientifique 3', ects: 1, coef: 1, unit: 'UEM3', hasExam: true, hasTD: false, hasTP: false }
     ],
     'SYM-S1': [
@@ -102,15 +102,15 @@ const GradeCalculator = () => {
       { name: 'Traitement d\'images', ects: 2, coef: 2, unit: 'UED2', hasExam: true, hasTD: false, hasTP: true }
     ],
     'SYM-S3': [
-      { name: 'Réalité virtuelle et humains virtuels', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Outils de Développement Multimédia', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Qualité et Sécurité Multimédia', ects: 4, coef: 2, unit: 'UEF6', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Multimédia et Réseaux', ects: 6, coef: 3, unit: 'UEF6', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Méthodes Scientifiques d\'Initiation à la Recherche', ects: 3, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
-      { name: 'Marketing et cyber marketing', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: true },
+      { name: 'Réalité virtuelle et humains virtuels', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Outils de Développement Multimédia', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Qualité et Sécurité Multimédia', ects: 4, coef: 2, unit: 'UEF6', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Multimédia et Réseaux', ects: 6, coef: 3, unit: 'UEF6', hasExam: true, hasTD: false, hasTP: true },
+      { name: 'Méthodes Scientifiques d\'Initiation à la Recherche', ects: 3, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: false },
+      { name: 'Marketing et cyber marketing', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: false, hasTP: true },
       { name: 'Anglais scientifique 3', ects: 2, coef: 1, unit: 'UEM3', hasExam: true, hasTD: false, hasTP: false },
       { name: 'Lutte contre la corruption', ects: 1, coef: 1, unit: 'UET3', hasExam: true, hasTD: false, hasTP: false },
-      { name: 'Réseaux sans fil', ects: 2, coef: 2, unit: 'UED3', hasExam: true, hasTD: true, hasTP: true }
+      { name: 'Réseaux sans fil', ects: 2, coef: 2, unit: 'UED3', hasExam: true, hasTD: false, hasTP: true }
     ]
   };
 
@@ -247,7 +247,7 @@ const GradeCalculator = () => {
 
           return (
             <div key={unitName} style={{marginBottom: '25px'}}>
-              <div className="unit-header" style={{...styles.card, background: theme.card, borderColor: theme.border, marginBottom: '12px', padding: '12px 15px'}}>
+              <div className="unit-header" style={{marginBottom: '12px', padding: '12px 0'}}>
                 <h3 style={{margin: '0 0 5px 0', color: '#3b82f6', fontSize: '16px'}}>{unitName}</h3>
                 <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                   <span style={{...styles.badge, background: '#3b82f620', color: '#3b82f6'}}>Coef {unitCoef}</span>
