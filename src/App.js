@@ -38,7 +38,7 @@ const GradeCalculator = () => {
     ],
     'RSI-S3': [
       { name: 'Cryptologie', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: false, hasTP: true },
-      { name: 'Sécurité système avancée', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: true, hasTP: false },
+      { name: 'Sécurité système avancée', ects: 4, coef: 2, unit: 'UEF5', hasExam: true, hasTD: false, hasTP: true },
       { name: 'Audit de sécurité', ects: 4, coef: 2, unit: 'UEF6', hasExam: true, hasTD: false, hasTP: true },
       { name: 'Sûreté des systèmes et applications répartis', ects: 6, coef: 3, unit: 'UEF6', hasExam: true, hasTD: false, hasTP: true },
       { name: 'Techniques d\'investigation 2', ects: 4, coef: 2, unit: 'UEM3', hasExam: true, hasTD: true, hasTP: false },
