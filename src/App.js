@@ -248,14 +248,13 @@ const GradeCalculator = () => {
           return (
             <div key={unitName} style={{marginBottom: '25px'}}>
               <div className="unit-header" style={{marginBottom: '12px', padding: '12px 0'}}>
-               <h3 style={{
-  margin: '0 0 5px 0',
-  color: darkMode ? '#93c5fd' : '#1d4ed8',
-  fontSize: '16px'
-}}>
-  {unitName}
-</h3>
-
+                <h3 style={{
+                  margin: '0 0 5px 0',
+                  color: darkMode ? '#93c5fd' : '#1d4ed8',
+                  fontSize: '16px'
+                }}>
+                  {unitName}
+                </h3>
                 <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                   <span style={{...styles.badge, background: '#3b82f620', color: '#3b82f6'}}>Coef {unitCoef}</span>
                   <span style={{fontWeight: '700', color: getAverageColor(unitAvg), fontSize: '14px'}}>Moyenne: {unitAvg.toFixed(2)}</span>
@@ -280,18 +279,18 @@ const GradeCalculator = () => {
 
                       <div className="grades-grid" style={styles.gradesGrid}>
                         <div>
-                          <label style={styles.inputLabel}>Examen</label>
+                          <label style={{...styles.inputLabel, color: theme.textSecondary}}>Examen</label>
                           <input type="number" inputMode="decimal" placeholder="00" value={moduleGrades.exam || ''} onChange={(e) => handleGradeChange(moduleIndex, 'exam', e.target.value)} style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border}} />
                         </div>
                         {module.hasTD && (
                           <div>
-                            <label style={styles.inputLabel}>TD</label>
+                            <label style={{...styles.inputLabel, color: theme.textSecondary}}>TD</label>
                             <input type="number" inputMode="decimal" placeholder="00" value={moduleGrades.td || ''} onChange={(e) => handleGradeChange(moduleIndex, 'td', e.target.value)} style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border}} />
                           </div>
                         )}
                         {module.hasTP && (
                           <div>
-                            <label style={styles.inputLabel}>TP</label>
+                            <label style={{...styles.inputLabel, color: theme.textSecondary}}>TP</label>
                             <input type="number" inputMode="decimal" placeholder="00" value={moduleGrades.tp || ''} onChange={(e) => handleGradeChange(moduleIndex, 'tp', e.target.value)} style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border}} />
                           </div>
                         )}
@@ -311,7 +310,6 @@ const GradeCalculator = () => {
           <div style={{marginTop: '30px', textAlign: 'center', padding: '20px', background: theme.card, borderRadius: '20px', border: `2px solid ${getAverageColor(generalAverage)}`, marginBottom: '40px'}}>
             <h2 style={{color: theme.text, marginBottom: '5px', fontSize: '18px'}}>Moyenne</h2>
             <div style={{fontSize: '48px', fontWeight: '800', color: getAverageColor(generalAverage)}}>{generalAverage}</div>
-         
           </div>
         )}
       </div>
@@ -345,13 +343,11 @@ const styles = {
   moduleHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px', gap: '10px' },
   moduleHeaderLeft: { display: 'flex', alignItems: 'flex-start', gap: '8px' },
   gradesGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(80px, 1fr))', gap: '10px' },
- inputLabel: {
-  fontSize: '11px',
-  marginBottom: '4px',
-  textAlign: 'center',
-  color: theme.textSecondary
-},
-
+  inputLabel: {
+    fontSize: '11px',
+    marginBottom: '4px',
+    textAlign: 'center'
+  },
   input: { width: '100%', padding: '8px 4px', borderRadius: '6px', border: '1px solid', textAlign: 'center', fontWeight: '600' },
   badge: { padding: '2px 8px', borderRadius: '12px', fontSize: '11px', fontWeight: '600' },
   modulesContainer: { display: 'flex', flexDirection: 'column', gap: '8px' }
