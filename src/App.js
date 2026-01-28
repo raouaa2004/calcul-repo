@@ -307,9 +307,9 @@ const GradeCalculator = () => {
         })}
 
         {currentModules.length > 0 && (
-          <div style={{marginTop: '30px', textAlign: 'center', padding: '20px', background: theme.card, borderRadius: '20px', border: `2px solid ${getAverageColor(generalAverage)}`, marginBottom: '40px'}}>
-            <h2 style={{color: theme.text, marginBottom: '5px', fontSize: '18px'}}>Moyenne</h2>
-            <div style={{fontSize: '48px', fontWeight: '800', color: getAverageColor(generalAverage)}}>{generalAverage}</div>
+          <div style={{marginTop: '30px', textAlign: 'center', marginBottom: '40px'}}>
+            <h2 style={{color: theme.textSecondary, marginBottom: '8px', fontSize: '15px', fontWeight: '500'}}>Moyenne Générale</h2>
+            <div style={{fontSize: '32px', fontWeight: '700', color: getAverageColor(generalAverage)}}>{generalAverage}</div>
           </div>
         )}
       </div>
