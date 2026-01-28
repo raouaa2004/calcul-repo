@@ -209,7 +209,7 @@ const GradeCalculator = () => {
               <h1 style={{ fontSize: '18px', fontWeight: '700', margin: 0, fontFamily: 'Abril Fatface', lineHeight: 1.1 }}>
                 Calculateur de moyenne Master
               </h1>
-              <p style={{fontSize: '10px', opacity: 0.9}}>Département d'Informatique - Tébessa</p>
+              <p style={{fontSize: '10px', opacity: 0.9}}>Département de l'Informatique - Tébessa</p>
             </div>
           </div>
           <button onClick={() => setDarkMode(!darkMode)} style={{ width: '40px', height: '40px', borderRadius: '50%', border: '1px solid rgba(255, 255, 255, 0.3)', background: 'rgba(255, 255, 255, 0.15)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -248,7 +248,14 @@ const GradeCalculator = () => {
           return (
             <div key={unitName} style={{marginBottom: '25px'}}>
               <div className="unit-header" style={{marginBottom: '12px', padding: '12px 0'}}>
-                <h3 style={{margin: '0 0 5px 0', color: '#3b82f6', fontSize: '16px'}}>{unitName}</h3>
+               <h3 style={{
+  margin: '0 0 5px 0',
+  color: darkMode ? '#93c5fd' : '#1d4ed8',
+  fontSize: '16px'
+}}>
+  {unitName}
+</h3>
+
                 <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                   <span style={{...styles.badge, background: '#3b82f620', color: '#3b82f6'}}>Coef {unitCoef}</span>
                   <span style={{fontWeight: '700', color: getAverageColor(unitAvg), fontSize: '14px'}}>Moyenne: {unitAvg.toFixed(2)}</span>
@@ -338,7 +345,13 @@ const styles = {
   moduleHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px', gap: '10px' },
   moduleHeaderLeft: { display: 'flex', alignItems: 'flex-start', gap: '8px' },
   gradesGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(80px, 1fr))', gap: '10px' },
-  inputLabel: { fontSize: '11px', display: 'block', marginBottom: '4px', opacity: 0.8, textAlign: 'center' },
+ inputLabel: {
+  fontSize: '11px',
+  marginBottom: '4px',
+  textAlign: 'center',
+  color: theme.textSecondary
+},
+
   input: { width: '100%', padding: '8px 4px', borderRadius: '6px', border: '1px solid', textAlign: 'center', fontWeight: '600' },
   badge: { padding: '2px 8px', borderRadius: '12px', fontSize: '11px', fontWeight: '600' },
   modulesContainer: { display: 'flex', flexDirection: 'column', gap: '8px' }
