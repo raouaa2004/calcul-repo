@@ -9,7 +9,7 @@ const GradeCalculator = () => {
 
   const specialties = [
     'Réseaux et Securité informatique (RSI)',
-    'Systèmes d'Information (SI)',
+  "Systèmes d'Information (SI)",
     'Systèmes et Multimédia (SYM)'
   ];
 
