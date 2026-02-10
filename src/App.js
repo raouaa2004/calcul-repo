@@ -9,7 +9,7 @@ const GradeCalculator = () => {
 
   const specialties = [
     'Réseaux et Securité informatique (RSI)',
-  "Systèmes d'Information (SI)",
+    "Systèmes d'Information (SI)",
     'Systèmes et Multimédia (SYM)'
   ];
 
@@ -280,18 +280,39 @@ const GradeCalculator = () => {
                       <div className="grades-grid" style={styles.gradesGrid}>
                         <div>
                           <label style={{...styles.inputLabel, color: theme.textSecondary}}>Examen</label>
-                          <input type="number" inputMode="decimal" placeholder="00" value={moduleGrades.exam || ''} onChange={(e) => handleGradeChange(moduleIndex, 'exam', e.target.value)} style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border}} />
+                          <input 
+                            type="number" 
+                            placeholder="00" 
+                            value={moduleGrades.exam || ''} 
+                            onChange={(e) => handleGradeChange(moduleIndex, 'exam', e.target.value)} 
+                            autoComplete="off"
+                            style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border}} 
+                          />
                         </div>
                         {module.hasTD && (
                           <div>
                             <label style={{...styles.inputLabel, color: theme.textSecondary}}>TD</label>
-                            <input type="number" inputMode="decimal" placeholder="00" value={moduleGrades.td || ''} onChange={(e) => handleGradeChange(moduleIndex, 'td', e.target.value)} style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border}} />
+                            <input 
+                              type="number" 
+                              placeholder="00" 
+                              value={moduleGrades.td || ''} 
+                              onChange={(e) => handleGradeChange(moduleIndex, 'td', e.target.value)} 
+                              autoComplete="off"
+                              style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border}} 
+                            />
                           </div>
                         )}
                         {module.hasTP && (
                           <div>
                             <label style={{...styles.inputLabel, color: theme.textSecondary}}>TP</label>
-                            <input type="number" inputMode="decimal" placeholder="00" value={moduleGrades.tp || ''} onChange={(e) => handleGradeChange(moduleIndex, 'tp', e.target.value)} style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border}} />
+                            <input 
+                              type="number" 
+                              placeholder="00" 
+                              value={moduleGrades.tp || ''} 
+                              onChange={(e) => handleGradeChange(moduleIndex, 'tp', e.target.value)} 
+                              autoComplete="off"
+                              style={{...styles.input, background: theme.input, color: theme.inputText, borderColor: theme.border}} 
+                            />
                           </div>
                         )}
                       </div>
